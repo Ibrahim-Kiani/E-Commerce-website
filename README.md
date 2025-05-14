@@ -12,10 +12,6 @@ A modern, responsive e-commerce website for grocery shopping with an intuitive u
 - **Shopping Cart**: Add and manage items in your cart
 - **Responsive Design**: Works on desktop and mobile devices
 
-## 🚀 Live Demo
-
-[View Live Demo](#) *(Coming Soon)*
-
 ## 🛠️ Technologies Used
 
 - HTML5
@@ -23,33 +19,7 @@ A modern, responsive e-commerce website for grocery shopping with an intuitive u
 - JavaScript (Vanilla)
 - Responsive Design Principles
 
-## 📂 Project Structure
 
-```
-/
-├── index.html              # Main homepage
-├── css/                    # All CSS files
-│   ├── styles.css          # Main CSS file
-│   ├── styles_home.css     # Home page specific styles
-│   ├── styles_about.css    # About page specific styles
-│   └── ...                 # Other page-specific CSS files
-├── js/                     # JavaScript files
-│   └── main.js             # Main JavaScript functionality
-├── images/                 # All image assets
-│   ├── logo/               # Logo images
-│   ├── products/           # Product images
-│   ├── icons/              # Icon images
-│   └── backgrounds/        # Background images
-└── pages/                  # HTML pages other than index
-    ├── about.html          # About page
-    ├── cart.html           # Shopping cart
-    ├── categories.html     # Product categories
-    ├── essentials.html     # Essential products
-    ├── featured.html       # Featured products
-    ├── fruitsnvegetables.html # Fruits and vegetables
-    ├── login.html          # Login page
-    └── payment.html        # Payment page
-```
 
 ## 🏁 Getting Started
 
@@ -66,14 +36,6 @@ A modern, responsive e-commerce website for grocery shopping with an intuitive u
 
 2. Open `index.html` in your browser to view the website
 
-## 📱 Screenshots
-
-<details>
-<summary>Click to view more screenshots</summary>
-
-*More screenshots coming soon*
-
-</details>
 
 ## 👥 Contributors
 
@@ -85,12 +47,3 @@ A modern, responsive e-commerce website for grocery shopping with an intuitive u
 ## 👨‍🏫 Supervisor
 
 - **Madam Khizra Sohail**
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Special thanks to our supervisor for guidance throughout the project
-- Icons and images used are properly credited to their respective owners
