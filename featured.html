@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Featured </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel = "stylesheet" href = "styles_fruitsnvegetables.css">
+	
+</head>
+<body>
+	<div class = "sidebar"> <!-- Creates a sidebar that is hidden out of view by pushing it out of the screen -->
+		<p> Navigation </p>
+		<a href = "featured.html"> <button> <p id = "sidebar-text"> Featured </p> </button> </a>
+		<a href = "essentials.html"> <button> <p id = "sidebar-text"> Essentials  </p> </button> </a>
+		<a href = "fruitsnvegetables.html"> <button> <p id = "sidebar-text"> Fruits & Vegetables </p> </button> </a>
+		<a href = "cart.html"> <button> <p id = "sidebar-text"> Cart </p> </button> </a>
+		<a href = "about.html"> <button id = "about"> <p id = "sidebar-text"> About </p> </button> </a>
+		
+		
+	</div>
+	<header> <!-- Header with working and interlinked pages -->
+		<button id = "navicon" onclick = "sidebar()"> <img src = "navicon.png" width = 30> </button>
+		<a href = "home.html"> <button id = "logo">  <img src = "logo.png" width = 260> </button> </a>
+		<input type = "text"> <button id = "search" > <img src = "search.png" width = 40> </button>
+		<a href = "categories.html"> <button id = "category" > <img src = "category.jpg" width = 70> </button> </a>
+		<a href = "featured.html"> <button> <img src = "featured.png" width = 110> </button> </a>
+		<a href = "cart.html"> <button> <img src = "cart.png" width = 60> </button> </a>
+		<a href = "login.html"> <p> Sign out? </p> </a>
+	</header>
+	<p id = "title"> FEATURED </p> <!-- Title -->
+	<div class = "main"> <!-- Main division -->
+		<div class = "main-row"> <!-- Row division -->
+			<div class = "item" onclick="addtocart(this)"> <!-- Item -->
+				<img src = "almond.jpg">
+				<p class = "name"> Almonds </p>
+				<p class = "price"> <b> Rs. 250 <s> 350 </s> </b> / 100 g </p>
+				<p class = "cart">  Click to add to cart. </p>
+			</div>
+			<div class = "item" onclick="addtocart(this)"> <!-- Item -->
+				<img src = "chocolate.jpg">
+				<p class = "name"> Chocolates </p>
+				<p class = "price"> <b> Rs. 100 <s> 150 </s> </b> / 100 g </p>
+				<p class = "cart">  Click to add to cart. </p>
+			</div>
+			<div class = "item" onclick="addtocart(this)"> <!-- Item -->
+				<img src = "register.jpg">
+				<p class = "name"> Register </p>
+				<p class = "price"> <b> Rs. 80 <s> 120 </s> </b> / Unit </p>
+				<p class = "cart">  Click to add to cart. </p>
+			</div>
+			
+		</div>
+		<div class = "main-row"> <!-- Row division -->
+			<div class = "item" onclick="addtocart(this)"> <!-- Item -->
+				<img src = "stationary.jpg">
+				<p class = "name"> Stationary </p>
+				<p class = "price"> <b> Rs. 100 <s> 150 </s> </b> / Bundle </p>
+				<p class = "cart">  Click to add to cart. </p>
+			</div>
+			<div class = "item" onclick="addtocart(this)"> <!-- Item -->
+				<img src = "greentea.jpg">
+				<p class = "name"> Green Tea </p>
+				<p class = "price"> <b> Rs. 100 <s> 150 </s> </b> / Serving </p>
+				<p class = "cart">  Click to add to cart. </p>
+			</div>
+			<div class = "item" onclick="addtocart(this)"> <!-- Item -->
+				<img src = "strawberry.jpg">
+				<p class = "name"> Strawberries </p>
+				<p class = "price"> <b> Rs. 150 <s> 200 </s> </b> / Kilo </p>
+				<p class = "cart">  Click to add to cart. </p>
+			</div>
+			
+		</div>
+		<div class = "main-row"> <!-- Row division -->
+			<div class = "item" onclick="addtocart(this)"> <!-- Item -->
+				<img src = "coconut.jpg">
+				<p class = "name"> Coconuts </p>
+				<p class = "price"> <b> Rs. 400 <s> 500 </s> </b> / Kilo </p>
+				<p class = "cart">  Click to add to cart. </p>
+			</div>
+			<div class = "item" onclick="addtocart(this)"> <!-- Item -->
+				<img src = "toothbrush.jpg">
+				<p class = "name"> Toothbrushes </p>
+				<p class = "price"> <b> Rs. 75 <s> 100 </s> </b> / Bundle </p>
+				<p class = "cart">  Click to add to cart. </p>
+			</div>
+			<div class = "item" onclick="addtocart(this)"> <!-- Item -->
+				<img src = "towel.jpg">
+				<p class = "name"> Towels </p>
+				<p class = "price"> <b> Rs. 350 <s> 450 </s> </b> / Bundle </p>
+				<p class = "cart">  Click to add to cart. </p>
+			</div>
+		</div>
+	</div>
+	<button id = "scrollm" onclick = "topscroll()"> </button> <!-- Button that scrolls to top -->	
+	<footer>
+		<img src = "logo.png" width = 120>
+		<p> 2023 &copy; </p> <a href = "#"> About </a> <a href = "#"> Legal Stuff </a> <a href = "#"> User Agreement </a> <a href = "#"> FAQ </a> <a href = "#"> Services </a> <a href = "#"> Support </a> <a href = "#"> Affiliates </a> 
+	</footer>
+	<script>
+		function addtocart(element) { <!-- Replaces the div with another div that says "Added to cart" -->
+            var cart = document.createElement('div');
+            cart.className = 'item';
+            cart.style.backgroundColor = 'white';
+            cart.innerHTML = '<p id = "carttext"> Added to cart! </p>';
+            element.parentNode.replaceChild(cart, element);
+        }
+		function topscroll() {
+			window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+			});
+		}
+		
+		function sidebar(){
+			var side = document.querySelector('.sidebar');
+			side.classList.toggle('slide');
+			event.stopPropagation();
+		}
+		document.addEventListener('click', function (event) {
+			var side = document.querySelector('.sidebar');
+			if (event.target !== side){
+				side.classList.remove('slide');
+			}
+		});
+	</script>
+	
+</body>
+</html>

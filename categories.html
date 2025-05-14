@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Categories </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel = "stylesheet" href = "styles_categories.css">
+	
+</head>
+<body>
+	<div class = "sidebar"> <!-- Creates a sidebar that is hidden out of view by pushing it out of the screen -->
+		<p> Navigation </p>
+		<a href = "featured.html"> <button> <p id = "sidebar-text"> Featured </p> </button> </a>
+		<a href = "essentials.html"> <button> <p id = "sidebar-text"> Essentials  </p> </button> </a>
+		<a href = "fruitsnvegetables.html"> <button> <p id = "sidebar-text"> Fruits & Vegetables </p> </button> </a>
+		<a href = "cart.html"> <button> <p id = "sidebar-text"> Cart </p> </button> </a>
+		<a href = "about.html"> <button id = "about"> <p id = "sidebar-text"> About </p> </button> </a>
+		
+		
+	</div>
+	<header> <!-- Header with working and interlinked pages -->
+		<button id = "navicon" onclick = "sidebar()"> <img src = "navicon.png" width = 30> </button>
+		<a href = "home.html"> <button id = "logo">  <img src = "logo.png" width = 260> </button> </a>
+		<input type = "text"> <button id = "search" > <img src = "search.png" width = 40> </button>
+		<a href = "categories.html"> <button id = "category" > <img src = "category.jpg" width = 70> </button> </a>
+		<a href = "featured.html"> <button> <img src = "featured.png" width = 110> </button> </a>
+		<a href = "cart.html"> <button> <img src = "cart.png" width = 60> </button> </a>
+		<a href = "login.html"> <p> Sign out? </p> </a>
+	</header>
+	<p id = "title"> CATEGORIES </p> <!-- Title -->
+	<div class = "main"> <!-- Main division -->
+		<div class = "main-div" id = "featuredm" onclick = "window.location.href='featured.html';">
+			<p> Featured </p>
+		</div>
+		<div class = "main-div" id = "essentialsm" onclick = "window.location.href='essentials.html';">
+			<p> Essentials </p>
+		</div>
+		<div class = "main-div" id = "fruitsnvegetablesm" onclick = "window.location.href='fruitsnvegetables.html';">
+			<p> Fruits & Vegetables </p>
+		</div>	
+		
+	</div>
+	<button id = "scrollm" onclick = "topscroll()"> </button> <!-- Button that scrolls to top -->
+	<footer>
+		<img src = "logo.png" width = 120>
+		<p> 2023 &copy; </p> <a href = "#"> About </a> <a href = "#"> Legal Stuff </a> <a href = "#"> User Agreement </a> <a href = "#"> FAQ </a> <a href = "#"> Services </a> <a href = "#"> Support </a> <a href = "#"> Affiliates </a> 
+	</footer>
+	<script>
+		function sidebar(){ <!-- Slides the sidebar to make it visible -->
+			var side = document.querySelector('.sidebar');
+			side.classList.toggle('slide');
+			event.stopPropagation();
+		}
+		document.addEventListener('click', function (event) { <!-- Clicking anywhere other than the sidebar hides the sidebar -->
+			var side = document.querySelector('.sidebar');
+			var btn = document.querySelector('#navicon');
+			if (event.target !== side){
+				side.classList.remove('slide');
+			}
+		});
+		function topscroll() { <!-- Scrolls to the top -->
+			window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+			});
+		}
+	</script>
+	
+</body>
+</html>

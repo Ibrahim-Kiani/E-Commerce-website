@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Cart </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" href = "styles_cart.css">
+	
+</head>
+<body>
+	<div class = "sidebar"> <!-- Creates a sidebar that is hidden out of view by pushing it out of the screen -->
+		<p> Navigation </p>
+		<a href = "featured.html"> <button> <p id = "sidebar-text"> Featured </p> </button> </a>
+		<a href = "essentials.html"> <button> <p id = "sidebar-text"> Essentials  </p> </button> </a>
+		<a href = "fruitsnvegetables.html"> <button> <p id = "sidebar-text"> Fruits & Vegetables </p> </button> </a>
+		<a href = "cart.html"> <button> <p id = "sidebar-text"> Cart </p> </button> </a>
+		<a href = "about.html"> <button id = "about"> <p id = "sidebar-text"> About </p> </button> </a>
+		
+		
+	</div>
+	<header> <!-- Header with working and interlinked pages -->
+		<button id = "navicon" onclick = "sidebar()"> <img src = "navicon.png" width = 30> </button>
+		<a href = "home.html"> <button id = "logo">  <img src = "logo.png" width = 260> </button> </a>
+		<input type = "text"> <button id = "search" > <img src = "search.png" width = 40> </button>
+		<a href = "categories.html"> <button id = "category" > <img src = "category.jpg" width = 70> </button> </a>
+		<a href = "featured.html"> <button> <img src = "featured.png" width = 110> </button> </a>
+		<a href = "cart.html"> <button> <img src = "cart.png" width = 60> </button> </a>
+		<a href = "login.html"> <p> Sign out? </p> </a>
+	</header>
+	<p id = "title"> CART </p> <!-- Title -->
+	<div class = "main"> <!-- Main division -->
+		<div class = "cartitems">
+			<p id = "heading"> Your items </p>
+			<div class = "item">
+				<img src = "onion.jpg">
+				<p id = "paragraph"> Onions </p>
+				<p id = "paragraph"> Vegetable </p>
+				<p id = "paragraph"> <b> Rs. 150 </b> / Kilo </p>
+			</div>
+			<div class = "item">
+				<img src = "egg.jpg">
+				<p id = "paragraph"> Eggs </p>
+				<p id = "paragraph"> Essential </p>
+				<p id = "paragraph"> <b> Rs. 250 </b> / Dozen </p>
+			</div>
+			<div class = "item">
+				<img src = "almond.jpg">
+				<p id = "paragraph"> Almonds <b>x 2</b> </p>
+				<p id = "paragraph"> Featured </p>
+				<p id = "paragraph"> <b> Rs. 250 <s> 350 </s> </b> / Kilo </p>
+			</div>
+			<div class = "item">
+				<img src = "greentea.jpg">
+				<p id = "paragraph"> Green tea </p>
+				<p id = "paragraph"> Featured </p>
+				<p id = "paragraph"> <b> Rs. 100 <s> 150 </s> </b> / Serving </p>
+			</div>
+		</div>
+		<div class = "checkout">
+			<p id = "heading"> Checkout </p>
+			<div class = "price">
+				<p id = "paragraph2"> Sub-total </p>
+				<p id = "paragraph2"> Rs. <b> 1000 <s> 1250 </s> </b> </p>
+			</div>
+			<div class = "price">
+				<p id = "paragraph2"> Delivery </p>
+				<p id = "paragraph2"><b> Free <s> Rs. 125 </s> </b> </p>
+			</div>
+			<a href = "payment.html"> <button id = "payment"> Proceed to Payment </button> </a>
+		</div>
+	</div>
+	<button id = "scrollm" onclick = "topscroll()"> </button> <!-- Button that scrolls to top -->
+	<footer>
+	<img src = "logo.png" width = 120>
+	<p> 2023 &copy; </p> <a href = "#"> About </a> <a href = "#"> Legal Stuff </a> <a href = "#"> User Agreement </a> <a href = "#"> FAQ </a> <a href = "#"> Services </a> <a href = "#"> Support </a> <a href = "#"> Affiliates </a> 
+	</footer>
+	<script>
+		function sidebar(){ <!-- Slides the sidebar to make it visible -->
+			var side = document.querySelector('.sidebar');
+			side.classList.toggle('slide');
+			event.stopPropagation();
+		}
+		document.addEventListener('click', function (event) { <!-- Clicking anywhere other than the sidebar hides the sidebar -->
+			var side = document.querySelector('.sidebar');
+			if (event.target !== side){
+				side.classList.remove('slide');
+			}
+		});
+		function topscroll() { <!-- Scrolls to the top -->
+			window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+			});
+		}
+	</script>
+	
+</body>
+</html>

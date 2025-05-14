@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title> My Website </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel = "stylesheet" href = "styles_login.css">
+</head>
+<body>
+	<div class = "sidebar"> <!-- Creates a sidebar that is hidden out of view by pushing it out of the screen -->
+		<p> Navigation </p>
+		<a href = "#"> <button> <p id = "sidebar-text"> Featured </p> </button> </a>
+		<a href = "#"> <button> <p id = "sidebar-text"> Essentials  </p> </button> </a>
+		<a href = "#"> <button> <p id = "sidebar-text"> Fruits & Vegetables </p> </button> </a>
+		<a href = "#"> <button> <p id = "sidebar-text"> Cart </p> </button> </a>
+		<a href = "#"> <button id = "about"> <p id = "sidebar-text"> About </p> </button> </a>
+	</div>
+	<header> <!-- Header with working and interlinked pages -->
+		<a> <button id = "navicon" onclick = "sidebar()"> <img src = "navicon.png" width = 30> </button> </a>
+		<a href = "#"> <button id = "logo">  <img src = "logo.png" width = 260> </button> </a>
+		<input type = "text"> <button id = "search"> <img src = "search.png" width = 40> </button>
+		<a href = "#"> <button id = "category"> <img src = "category.jpg" width = 70> </button> </a>
+		<a href = "#"> <button> <img src = "featured.png" width = 110> </button> </a>
+		<a href = "#"> <button id = "cart"> <img src = "cart.png" width = 60> </button> </a>
+		 
+	</header>
+	<div class = "signin"> <!-- Main body partition -->
+		<div class = "signup"> <!-- Login div -->
+			<p id = "heading"> Sign in </p>
+			<form>
+				<label> Username: </label> <br>
+				<input type = "text" id = "username">  <br> <br>
+				<label> Password: </label> <br>
+				<input type = "text" id = "password"> <br> <br>
+			</form>
+			
+			<a> <button type = "submit" onclick = "login()"> Sign in </button> </a>
+		</div>
+		<div class = "register"> <!-- Registration div -->
+			<p id = "heading"> Register </p>
+			<form>
+				<label> Email address: </label> <br>
+				<input type = "text">  <br> <br>
+				<label> Phone number: </label> <br>
+				<input type = "text"> <br> <br>
+				<label> Username: </label> <br>
+				<input type = "text">  <br> <br>
+				<label> Password: </label> <br>
+				<input type = "text"> <br> <br>
+				
+			</form>	
+			<a> <button type = "submit" onclick = "register()"> Register </button> </a>
+		</div> 
+	</div>
+	<button id = "scrollm" onclick = "topscroll()"> </button>
+	<footer>
+	<img src = "logo.png" width = 120>
+	<p> 2023 &copy; </p> <a href = "about.html"> About </a> <a href = "#"> Legal Stuff </a> <a href = "#"> User Agreement </a> <a href = "#"> FAQ </a> <a href = "#"> Services </a> <a href = "#"> Support </a> <a href = "#"> Affiliates </a> 
+	</footer>
+	<script>
+		function register(){
+			alert('Successfully Registered.'); <!-- Sends alert when registering -->
+		}
+		function login(){ <!-- Checks login credentials -->
+			var user = document.getElementById("username").value;
+			var pass = document.getElementById("password").value;
+			if (user=='fast' && pass=='grocers')
+				location.href = "home.html";
+			else
+				alert('Wrong Password or Username.');
+		}
+		function sidebar(){ <!-- Slides the sidebar to make it visible -->
+			var side = document.querySelector('.sidebar');
+			side.classList.toggle('slide');
+			event.stopPropagation();
+		}
+		document.addEventListener('click', function (event) { <!-- Clicking anywhere other than the sidebar hides the sidebar -->
+			var side = document.querySelector('.sidebar');
+			if (event.target !== side){
+				side.classList.remove('slide');
+			}
+		});
+		function topscroll() { <!-- Scrolls to the top -->
+			window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+			});
+		}
+	</script>
+	
+</body>
+</html>

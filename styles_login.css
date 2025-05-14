@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Oswald:wght@300&display=swap');
+body{
+	margin: 0px;
+	background-color: #FCFBF4;
+	background-image: url('body.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Roboto Condensed', 'Oswald', sans-serif;
+	
+	
+}
+.sidebar{
+	background-color: white;
+	position: fixed;
+	left: -260px;
+	width: 250px;
+	height: 100%;
+	z-index: 1;
+	border-right: 6px solid black;
+	border-left: 6px solid black;
+}
+
+#sidebar-text{
+	font-size: 20px;
+}
+
+.sidebar p{
+	font-size: 45px;
+	text-align: center;
+	
+}
+
+.sidebar.slide{
+	transition: left 0.3s ease;
+	left: 0px;
+}
+
+.sidebar button{
+	background-color: white;
+	border: none;
+	border-bottom: 1px outset black;
+	border-radius: 15px;
+	margin-top: 50px;
+	width: 250px;
+	height: 50px;
+}
+
+.sidebar button:hover{
+	cursor: pointer;
+	transition: opacity 0.3s ease;
+	opacity: 0.85;
+}
+
+#about{
+	margin-top: 150px;
+	border: none;
+}
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-left: 0px;
+	width: 100%;
+	height: 80px;
+	background-color: white;
+	color: black;
+	font-size: 24px;
+	border-bottom: 6px ridge black;
+	
+	
+}
+#navicon{
+	margin-left: -50px;
+}
+header input{
+	width: 330px;
+	height: 50px;
+}
+#search{
+	width: 52px;
+	height: 50px;
+	border: 1px solid black;
+}
+#heading{
+	font-size: 50px;
+	
+}
+#logo{
+	margin-left: -30px;
+	width: 300px;
+}
+#category{
+	margin-left: 0px;
+}
+#cart{
+	margin-right: 90px;
+}
+header button{
+	width: 160px;
+	background: none;
+	color: black;
+	font-size: 15px;
+	border: none;
+	
+}
+
+header a{
+	text-decoration: none;
+	color: inherit;
+	margin-right: 20px;
+}
+header a:hover{
+	transition: opacity 0.3s ease;
+	opacity: 0.85;
+}
+
+
+
+header button:hover{
+	transition: opacity 0.3s ease;
+	opacity: 0.85;
+	cursor: pointer;
+}
+footer{
+	
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: white;
+	font-size: 15px;
+	position: relative;
+	bottom: 0;
+}
+footer img{
+	margin-left: 50px;
+}
+footer a{
+	text-decoration: none;
+	color: inherit;
+	margin-right: 50px;
+}
+footer a:hover{
+	border-bottom: 1px solid black;
+}
+#scrollm{
+	width: 50px;
+	height: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 80px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+	background-image: url('scroll.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.signin{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 1100px;
+	height: 700px;
+	margin-top: 90px;
+	margin-bottom: 60px;
+	margin-left: 100px;
+	padding-left: 20px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.9);
+	border: 2px outset white;
+	border-radius: 20px;
+
+}
+.signup{
+	width: 300px;
+	height: 600px;
+	padding-right: 50px;
+	border-right: 1px inset white;
+	
+	
+}
+
+
+.signup input{
+	
+	margin-right: 10px;
+	margin-top: 10px;
+	width: 280px;
+}
+
+.signin button{
+	margin-top: 40px;
+	width: 280px;
+	height: 30px;
+	background-color: white;
+	border: none;
+	border-radius: 5px;
+}
+
+.signin button:hover{
+	transition: opacity 0.2s ease;
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+
+.register{
+	width: 600px;
+	height: 600px;
+	
+}
+
+.register input{
+	
+	margin-right: 10px;
+	margin-top: 10px;
+	width: 380px;
+}
+
+.register button{
+	width: 380px;
+}
